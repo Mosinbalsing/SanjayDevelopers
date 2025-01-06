@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Home, Info, Briefcase, Mail, Menu, X ,StickyNote} from "lucide-react";
+import { Home, Info, Briefcase, Mail,StickyNote} from "lucide-react";
+import { IoMenu ,IoClose} from "react-icons/io5";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -11,7 +12,7 @@ const navItems = [
   { name: "Projects", icon: Briefcase, href: "/service" },
   { name: "Blog", icon: StickyNote, href: "/blog" },
   { name: "Contact", icon: Mail, href: "/contact" },
-  
+
 ];
 
 export default function Navbar() {
@@ -62,9 +63,11 @@ export default function Navbar() {
               className="outline-none mobile-menu-button"
             >
               {isOpen ? (
-                <X className="bg-white h-6 w-6" />
+                <IoClose className="bg-white h-6 w-6" />
+                
               ) : (
-                <Menu className="bg-white h-6 w-6" />
+                <IoMenu className="bg-white h-6 w-6" />
+          
               )}
             </button>
           </div>
