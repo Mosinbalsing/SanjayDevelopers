@@ -11,6 +11,7 @@ const navItems = [
   { name: "Projects", icon: Briefcase, href: "/service" },
   { name: "Blog", icon: StickyNote, href: "/blog" },
   { name: "Contact", icon: Mail, href: "/contact" },
+  
 ];
 
 export default function Navbar() {
