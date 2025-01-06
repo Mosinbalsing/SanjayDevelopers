@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Home, Info, Briefcase, Mail, Menu, X ,StickyNote} from "lucide-react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const navItems = [
   { name: "Home", icon: Home, href: "/" },
@@ -21,7 +23,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
             <Link to="/">
-          <div className="flex items-center space-x-2 cursor-pointer">
+          <div className="flex items-center space-x-2 cursor-pointer" data-aos="fade-up">
             <img src="./images/logo.png" alt="Logo" className="h-12 w-12" />
             <span className="text-xl font-bold hidden md:block">Sanjay Developers</span>
           </div>
