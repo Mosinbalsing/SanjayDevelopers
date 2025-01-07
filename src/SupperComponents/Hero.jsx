@@ -9,7 +9,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative bg-[rgb(55,94,191)] bg-[linear-gradient(90deg,_rgba(0,212,255,1)_0%,_rgba(9,9,121,1)_31%,_rgba(2,0,36,1)_100%)] pb-[120px] xl:pt-[120px] dark:bg-dark min-h-[650px] lg:pt-[150px] px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="relative bg-[rgb(55,94,191)] bg-[linear-gradient(90deg,_rgba(0,212,255,1)_0%,_rgba(9,9,121,1)_31%,_rgba(2,0,36,1)_100%)] pb-[120px] xl:pt-[120px] dark:bg-dark min-h-[650px] lg:pt-[150px] px-4 sm:px-6 lg:px-8 overflow-hidden z-10">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
       <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] "></div>
 
@@ -64,6 +64,7 @@ const Hero = () => {
             d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
         </svg>
+          
       </div>
     </div>
   );

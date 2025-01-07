@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Home, Info, Briefcase, Mail,StickyNote} from "lucide-react";
-import { IoMenu ,IoClose} from "react-icons/io5";
+import { IoMenuOutline ,IoCloseOutline} from "react-icons/io5";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -17,6 +17,9 @@ const navItems = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   return (
     <nav className="bg-[rgb(0,212,255)] bg-[linear-gradient(90deg,_rgba(0,212,255,1)_0%,_rgba(9,9,121,1)_31%,_rgba(2,0,36,1)_100%)] text-white w-full">
@@ -63,10 +66,10 @@ export default function Navbar() {
               className="outline-none mobile-menu-button"
             >
               {isOpen ? (
-                <IoClose className="bg-white h-6 w-6" />
+                <IoCloseOutline className="bg-white h-6 w-6" />
                 
               ) : (
-                <IoMenu className="bg-white h-6 w-6" />
+                <IoMenuOutline className="bg-white h-6 w-6" />
           
               )}
             </button>

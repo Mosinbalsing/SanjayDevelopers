@@ -6,12 +6,12 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel"
 
-export function CarouselOrientation() {
+export function CarouselProject() {
   const [api, setApi] = useState()
-  const [isHovered, setIsHovered] = useState(false)
+
 
   useEffect(() => {
-    if (!api || isHovered) {
+    if (!api ) {
       return
     }
 
@@ -20,17 +20,17 @@ export function CarouselOrientation() {
     }, 2000) // 2000 ms = 2 seconds
 
     return () => clearInterval(interval) // Clean up the interval on component unmount
-  }, [api, isHovered])
+  }, [api])
 
+  
   const demoImages = [
-    "./villa/img1.jpg",
-    "./villa/img2.jpg",
-    "./villa/img3.jpg",
-    "./villa/img4.jpg",
-    "./villa/img5.jpg",
-    "./villa/img6.jpg",
-    "./villa/img7.jpg",
-   
+    "./images/placeholderImage.svg",
+    "./images/placeholderImage.svg",
+    "./images/placeholderImage.svg",
+    "./images/placeholderImage.svg",
+    "./images/placeholderImage.svg",
+    "./images/placeholderImage.svg",
+    "./images/placeholderImage.svg",
   ]
 
   return (
@@ -41,18 +41,16 @@ export function CarouselOrientation() {
         loop: true,
       }}
       orientation="vertical"
-      className="w-[60%]  overflow-visible"
+      className="w-[70%]  overflow-visible"
     >
-      <CarouselContent className="-mt-1 h-[600px] overflow-visible p-10">
+      <CarouselContent className="-mt-1 h-[300px] overflow-visible p-10">
         {demoImages.map((src, index) => (
           <CarouselItem
             key={index}
-            className="pt-1 md:basis-1/3"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            className="pt-1 md:basis-1/2"
           >
             <div className="p-1">
-              <Card className="overflow-hidden h-[250px] relative transform transition-transform duration-300 hover:scale-105 hover:-translate-x-6 hover:shadow-lg hover:shadow-white">
+              <Card className="overflow-hidden h-[250px] relative transform transition-transform duration-300">
                 {/* Demo Image */}
                 <img
                   src={src}
@@ -60,9 +58,9 @@ export function CarouselOrientation() {
                   className="h-full w-full object-cover"
                 />
                 {/* Text on Hover */}
-                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 flex items-center justify-center  transition-opacity duration-300">
                   <span className="text-white text-xl font-semibold">
-                    Demo {index + 1}
+                   
                   </span>
                 </div>
               </Card>
