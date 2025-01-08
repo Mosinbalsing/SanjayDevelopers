@@ -3,13 +3,15 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { CarouselOrientation } from "./Carousel";
 
+
 const Hero = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
 
   return (
-    <div className="relative bg-[rgb(55,94,191)] bg-[linear-gradient(90deg,_rgba(0,212,255,1)_0%,_rgba(9,9,121,1)_31%,_rgba(2,0,36,1)_100%)] pb-[120px] xl:pt-[120px] dark:bg-dark min-h-[650px] lg:pt-[150px] px-4 sm:px-6 lg:px-8 overflow-hidden z-10">
+    <div className="relative bg-[rgb(55,94,191)] bg-[linear-gradient(90deg,_rgba(0,212,255,1)_0%,_rgba(9,9,121,1)_31%,_rgba(2,0,36,1)_100%)] pb-[120px] xl:pt-[250px] dark:bg-dark min-h-[1050px] lg:pt-[150px] px-4 sm:px-6 lg:px-8 overflow-hidden z-10 top-0">
+   
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
       <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] "></div>
 

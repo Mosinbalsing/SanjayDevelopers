@@ -2,7 +2,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaMapMarkerAlt } from 'react-icons/
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-12">
+    <footer className="bg-gray-800 text-white py-12 ">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand Section */}
         <div className="flex flex-col items-center">

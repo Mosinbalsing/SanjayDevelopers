@@ -2,7 +2,7 @@ import ImageCollage from './ImageCollage';
 
 export default function PanchshilAbout() {
   return (
-    <div className="bg-[#433B71] text-white min-h-screen flex flex-col">
+    <div className="bg-[#2e2752] text-white min-h-screen flex flex-col">
       <main className="flex-grow flex flex-col md:flex-row p-8 gap-8">
         <div className="md:w-1/2 relative">
           <ImageCollage />

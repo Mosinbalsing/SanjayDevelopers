@@ -81,15 +81,6 @@ export default function BlogHome() {
                 <p className="text-gray-600 mb-4">
                   {blog.description}
                 </p>
-
-                <div className="flex items-center justify-between">
-                  <button className="text-orange-500 font-semibold hover:text-orange-600 transition-colors">
-                    Read More
-                  </button>
-                  <div className="w-8 h-8 rounded-full bg-[#433B71] text-white flex items-center justify-center">
-                    →
-                  </div>
-                </div>
               </div>
             </article>
           ))}

@@ -24,10 +24,6 @@ export function AboutHero() {
     // Set initial count and current slide
     setCount(api.scrollSnapList().length);
    
-
-    // Update current slide when user interacts
-   
-
     // Set up auto-scroll
     const interval = setInterval(() => {
       if (api) {
@@ -41,17 +37,17 @@ export function AboutHero() {
   }, [api, count]);
 
   return (
-    <div className="w-full h-screen flex justify-center items-center flex-col">
-      <Carousel setApi={setApi} className="w-full h-[600px]">
-        <CarouselContent className="w-full  h-[600px]">
+    <div className="w-full h-[900px] flex justify-center items-center flex-col p-0 m-0">
+      <Carousel setApi={setApi} className="w-full h-[900px] p-0">
+        <CarouselContent className="w-full  h-[900px] p-0 m-0">
           {demoImages.map((src, index) => (
             <CarouselItem
             key={index}
-            className=" md:basis-1/1 w-full h-[600px]"
+            className=" md:basis-1/1 w-full h-[900px] p-0 m-0"
             
           >
             <div className="p-1 w-full h-[600px]">
-              <Card className="overflow-hidden w-full h-[600px] relative transform transition-transform duration-300 ">
+              <Card className="overflow-hidden w-full h-[900px] relative transform transition-transform duration-300 ">
                 {/* Demo Image */}
                 <img
                   src={src}

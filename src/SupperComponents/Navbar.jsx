@@ -22,91 +22,90 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-[rgb(0,212,255)] bg-[linear-gradient(90deg,_rgba(0,212,255,1)_0%,_rgba(9,9,121,1)_31%,_rgba(2,0,36,1)_100%)] text-white w-full">
-      <div className="max-w-6xl mx-auto px-4">
-        {/* Desktop Navbar */}
-        <div className="flex items-center justify-between py-4">
-          {/* Logo */}
-            <Link to="/">
-          <div className="flex items-center space-x-2 cursor-pointer" data-aos="fade-up">
-            <img src="./images/logo.png" alt="Logo" className="h-12 w-12" />
-            <span className="text-xl font-bold hidden md:block">Sanjay Developers</span>
-          </div>
-            </Link>
-
-          {/* Nav Items for Desktop */}
-          <div className="hidden md:flex items-center space-x-7">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="py-2 px-4 text-zinc-100 font-semibold hover:text-blue-500 transition duration-300 group relative"
-              >
-                <motion.div
-                  className="flex items-center"
-                  whileHover={{ y: -2 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 10,
-                  }}
-                >
-                  <item.icon className="h-5 w-5 mr-2" />
-                  {item.name}
-                </motion.div>
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="outline-none mobile-menu-button"
-            >
-              {isOpen ? (
-                <IoCloseOutline className="bg-white h-6 w-6" />
-                
-              ) : (
-                <IoMenuOutline className="bg-white h-6 w-6" />
-          
-              )}
-            </button>
-          </div>
+    <nav className="bg-transparent text-white w-full sticky  z-50">
+  <div className="max-w-full mx-auto px-4">
+    {/* Desktop Navbar */}
+    <div className="flex items-center justify-start py-4">
+      {/* Logo */}
+      <Link to="/" className="w-full relative left-1" >
+        <div className="flex items-center space-x-2 cursor-pointer justify-start  w-[40%]" data-aos="fade-up">
+          <img src="./images/logo.png" alt="Logo" className="h-40 w-40" />
+         
         </div>
+      </Link>
+
+      {/* Nav Items for Desktop */}
+      <div className="hidden md:flex items-center space-x-7">
+        {navItems.map((item) => (
+          <Link
+            key={item.name}
+            to={item.href}
+            className="py-2 px-4 text-zinc-100 font-semibold hover:text-blue-500 transition duration-300 group relative"
+          >
+            <motion.div
+              className="flex items-center"
+              whileHover={{ y: -2 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 10,
+              }}
+            >
+              <item.icon className="h-5 w-5 mr-2" />
+              {item.name}
+            </motion.div>
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </Link>
+        ))}
       </div>
 
-      {/* Mobile Dropdown Menu */}
-      <motion.div
-        className={`md:hidden ${isOpen ? "block" : "hidden"}`}
-        initial="closed"
-        animate={isOpen ? "open" : "closed"}
-        variants={{
-          open: { opacity: 1, height: "auto" },
-          closed: { opacity: 0, height: 0 },
-        }}
-        transition={{ duration: 0.3 }}
-      >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.href}
-              className="text-gray-100 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium transition duration-300"
-            >
-              <motion.div
-                className="flex items-center"
-                whileHover={{ x: 5 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              >
-                <item.icon className="h-5 w-5 mr-2" />
-                {item.name}
-              </motion.div>
-            </Link>
-          ))}
-        </div>
-      </motion.div>
-    </nav>
+      {/* Mobile Menu Button */}
+      <div className="md:hidden flex items-center">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="outline-none mobile-menu-button"
+        >
+          {isOpen ? (
+            <IoCloseOutline className="bg-white h-6 w-6" />
+          ) : (
+            <IoMenuOutline className="bg-white h-6 w-6" />
+          )}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {/* Mobile Dropdown Menu */}
+  <motion.div
+    className={`md:hidden ${isOpen ? "block" : "hidden"}`}
+    initial="closed"
+    animate={isOpen ? "open" : "closed"}
+    variants={{
+      open: { opacity: 1, height: "auto" },
+      closed: { opacity: 0, height: 0 },
+    }}
+    transition={{ duration: 0.3 }}
+  >
+    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      {navItems.map((item) => (
+        <Link
+          key={item.name}
+          to={item.href}
+          className="text-gray-100 hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium transition duration-300"
+        >
+          <motion.div
+            className="flex items-center"
+            whileHover={{ x: 5 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            <item.icon className="h-5 w-5 mr-2" />
+            {item.name}
+          </motion.div>
+        </Link>
+      ))}
+    </div>
+  </motion.div>
+</nav>
+
   );
 }
