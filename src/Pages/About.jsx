@@ -1,9 +1,10 @@
-import { AboutHero } from "@/SupperComponents/AboutHero"
 import { ChairmanMessage } from "@/SupperComponents/About-chairman-message"
 import Aos from "aos"
 import "aos/dist/aos.css"
 import { useEffect } from "react"
 import Hero from "@/SupperComponents/Hero"
+import { MissionVision } from "@/SupperComponents/mission-vision"
+import { CoreValues } from "@/SupperComponents/core-values"
 const About = () => {
     useEffect(() => {
         Aos.init({ duration: 1000 })
@@ -12,7 +13,8 @@ const About = () => {
     <div className=' text-white h-[600px] flex flex-col w-full relative top-[-300px]'>
       <Hero />
       <ChairmanMessage />
-     
+      <MissionVision/>
+      <CoreValues/>
     </div>
   )
 }

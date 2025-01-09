@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 const navItems = [
   { name: "Home", icon: Home, href: "/" },
   { name: "About", icon: Info, href: "/about" },
-  { name: "Projects", icon: Briefcase, href: "/service" },
+  { name: "Projects", icon: Briefcase, href: "/projects" },
   { name: "Blog", icon: StickyNote, href: "/blog" },
   { name: "Contact", icon: Mail, href: "/contact" },
 

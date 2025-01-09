@@ -1,55 +1,71 @@
-import { FaFacebook, FaTwitter, FaInstagram, FaMapMarkerAlt } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+import { Facebook, Youtube, Instagram, Phone, Mail, MapPinHouse } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-12 ">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Brand Section */}
-        <div className="flex flex-col items-center">
-          <div
-            className="bg-gray-700 w-24 h-24 flex items-center justify-center mb-4 animate-bounce rounded-full"
-          >
-            <p className="text-xl font-bold">Logo</p>
+    <footer className="w-full py-12 bg-[#2E2752] border-t flex justify-center ic text-white">
+      <div className="flex w-[90%]">
+        <div className="flex flex-col">
+          <div className="lg:col-span-2 p-10">
+            <h3 className="mb-6 text-lg font-semibold">Recent Post</h3>
+            <div className="space-y-4">
+              <article className="flex gap-4">
+                <div className="w-16 h-16 bg-gray-100 rounded-lg" />
+                <div>
+                  <h4 className="font-medium">
+                    Non sodales neque sodales ut etiam sit.
+                  </h4>
+                  <p className="text-sm text-gray-500">17 May 2021</p>
+                </div>
+              </article>
+              <article className="flex gap-4">
+                <div className="w-16 h-16 bg-gray-100 rounded-lg" />
+                <div>
+                  <h4 className="font-medium">
+                    Elementum integer enim neque volutpat ac tincidunt vitae
+                    semper.
+                  </h4>
+                  <p className="text-sm text-gray-500">17 May 2021</p>
+                </div>
+              </article>
+            </div>
           </div>
-          <p className="text-lg font-semibold">Brand Name</p>
         </div>
-
-        {/* Social Links Section */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Social Links</h3>
-          <ul className="space-y-4">
-            <li className="flex items-center gap-4 transition-transform hover:translate-x-2">
-              <FaFacebook className="text-blue-500 text-2xl" />
-              <a href="#" className="hover:text-gray-300">Facebook</a>
-            </li>
-            <li className="flex items-center gap-4 transition-transform hover:translate-x-2">
-              <FaTwitter className="text-blue-400 text-2xl" />
-              <a href="#" className="hover:text-gray-300">Twitter</a>
-            </li>
-            <li className="flex items-center gap-4 transition-transform hover:translate-x-2">
-              <FaInstagram className="text-pink-400 text-2xl" />
-              <a href="#" className="hover:text-gray-300">Instagram</a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Address Section */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Address</h3>
-          <p className="flex items-center gap-2">
-            <FaMapMarkerAlt className="text-red-500" />
-            123 Main Street, City, State
-          </p>
-          <p>ZIP Code, Country</p>
-        </div>
-
-        {/* Google Map Section */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Google Map</h3>
-          <div
-            className="bg-gray-700 w-full h-32 flex items-center justify-center animate-pulse"
-          >
-            <p className="text-gray-400">Map Placeholder</p>
+        <div className="right flex flex-col w-[60%] p-10">
+          <div className="flex flex-col">
+            <h3 className="mb-6 text-lg font-semibold">Sanjay Developers</h3>
+            <div className="flex space-x-24 justify-start w-full">
+              <div className="flex flex-col space-y-6">
+                <h4 className="font-medium">Follow Our Social Media</h4>
+                <div className="flex gap-6">
+                  <Link href="#" className="text-blue-600 bg-white hover:bg-blue-700 hover:text-white p-2 rounded-full">
+                    <Facebook className="w-6 h-6" />
+                  </Link>
+                  <Link href="#" className="text-red-700 hover:bg-red-700 hover:text-white p-2 rounded-full">
+                    <Youtube className="w-6 h-6" />
+                  </Link>
+                  <Link href="#" className="text-pink-600 hover:bg-pink-700 hover:text-white p-2 rounded-full"> 
+                    <Instagram className="w-6 h-6" />
+                  </Link>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <h4 className="font-medium">Any Queries</h4>
+                <div className="flex items-center gap-2 text-sm ">
+                  <Phone className="w-4 h-4" />
+                  <span>+ 01 234 567 890 / (01213 456 789)</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Mail className="w-4 h-4"/>
+                 <span>dRw0V@example.com</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                <MapPinHouse className="w-4 h-4"/>
+                 <span>Sanjay Developers, Mumbai</span>
+                </div>
+              </div>
+              
+            </div>
           </div>
         </div>
       </div>

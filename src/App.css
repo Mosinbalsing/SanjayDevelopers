@@ -1,0 +1,30 @@
+/* App.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  footer {
+    background-color: #f1f1f1; /* Customize as needed */
+    padding: 10px;
+    bottom: 0;
+  }
+  

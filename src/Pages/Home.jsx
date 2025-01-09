@@ -1,4 +1,3 @@
-import AboutHome from "@/SupperComponents/About-Home";
 import AboutHome2 from "@/SupperComponents/AboutHome2";
 import PropertyFinder from "@/SupperComponents/property-finder";
 import ProjectHome from "@/SupperComponents/Project-Home";

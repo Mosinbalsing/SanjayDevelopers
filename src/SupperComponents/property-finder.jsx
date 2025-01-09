@@ -34,7 +34,8 @@ const properties = [
     ],
   },
   {
-    title: "Sanjay Primus (Shivaji Nagar Pune) – Upcoming Redevelopment Project",
+    title:
+      "Sanjay Primus (Shivaji Nagar Pune) – Upcoming Redevelopment Project",
     image: "./images/Primus.jpg", // Replace with the correct image path
     stats: [
       { icon: <Briefcase />, text: "20+ sophisticated office spaces" },
@@ -58,7 +59,7 @@ export default function PropertyListing() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-      <h1 
+      <h1
         className="text-4xl md:text-5xl lg:text-6xl mb-12 font-Sans weight-400 text-gray-800"
         data-aos="fade-down"
       >
@@ -67,17 +68,21 @@ export default function PropertyListing() {
 
       {properties.map((property, index) => (
         <div key={index} className="mb-16">
-          <h2 
+          <h2
             className="text-2xl text-gray-600 mb-8"
             data-aos="fade-right"
             data-aos-delay={`${index * 100}`}
           >
             {property.title}
           </h2>
-          <div className="h-0.5 w-24 bg-gray-300 mb-12" data-aos="width" data-aos-delay={`${index * 200}`}></div>
+          <div
+            className="h-0.5 w-24 bg-gray-300 mb-12"
+            data-aos="width"
+            data-aos-delay={`${index * 200}`}
+          ></div>
 
           <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div 
+            <div
               className="relative h-[400px] overflow-hidden rounded-lg"
               data-aos="fade-right"
               data-aos-delay={`${index * 300}`}
@@ -89,15 +94,17 @@ export default function PropertyListing() {
               />
             </div>
 
-            <div className="space-y-8" data-aos="fade-left" data-aos-delay={`${index * 400}`}>
+            <div
+              className="space-y-8"
+              data-aos="fade-left"
+              data-aos-delay={`${index * 400}`}
+            >
               <h3 className="text-4xl font-semibold">{property.title}</h3>
-              
+
               <div className="space-y-4">
                 {property.stats.map((stat, statIndex) => (
                   <div key={statIndex} className="flex items-center gap-4">
-                    <div className="w-8 h-8 text-gray-800">
-                      {stat.icon}
-                    </div>
+                    <div className="w-8 h-8 text-gray-800">{stat.icon}</div>
                     <p className="text-gray-600">{stat.text}</p>
                   </div>
                 ))}
@@ -113,6 +120,9 @@ export default function PropertyListing() {
               </div>
             </div>
           </div>
+
+          {/* Gray line after each project */}
+          <hr className="border-gray-300 mt-16" />
         </div>
       ))}
     </div>

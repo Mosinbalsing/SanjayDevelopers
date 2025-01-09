@@ -3,7 +3,7 @@ import { MessageSquare } from "lucide-react";
 
 export function ChairmanMessage() {
   return (
-    <section className="w-full h-[560px] flex justify-center items-center">
+    <section className="w-full h-[560px] flex justify-center items-center relative">
       <div className="container px-4 h-[500px] flex justify-center items-center">
         <Card className="flex flex-col md:flex-row items-center justify-between h-[100%]">
           <div className="w-[60%] h-[100%] p-4">

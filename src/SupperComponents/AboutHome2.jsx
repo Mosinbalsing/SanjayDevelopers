@@ -8,7 +8,7 @@ export default function PanchshilAbout() {
           <ImageCollage />
         </div>
         <div className="md:w-1/2 flex flex-col justify-center">
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-4xl font-bold mb-4 text-[#FDE047]">
             Enhancing lifestyles with modern luxury and thoughtful design.
           </h1>
           <p className="text-lg mb-4">

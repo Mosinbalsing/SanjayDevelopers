@@ -55,11 +55,7 @@ export function AboutHero() {
                   className="h-full w-full object-cover"
                 />
                 {/* Text on Hover */}
-                <div className="absolute inset-0 flex items-center justify-center bg-[#433B71] bg-opacity-60  opacity-100 transition-opacity duration-300">
-                  <span className="text-white text-xl font-semibold">
-                    Demo {index + 1}
-                  </span>
-                </div>
+                
               </Card>
             </div>
           </CarouselItem>
