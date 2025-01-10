@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 export default function BlogHome() {
   useEffect(() => {
@@ -41,7 +42,7 @@ export default function BlogHome() {
   ];
 
   return (
-    <section className="bg-[#433B71] py-16 px-4 md:px-8">
+    <section className="bg-[] py-16 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Latest Insights</h2>
@@ -91,9 +92,11 @@ export default function BlogHome() {
           data-aos="fade-up"
           data-aos-delay="400"
         >
+          <Link to="/blog" >
           <button className="bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors">
             View All Articles
           </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -64,7 +64,7 @@ export const CoreValues = () => {
   ];
 
   return (
-    <div className="container mx-auto px-12 py-12 flex flex-wrap justify-center gap-8">
+    <div className="container mx-auto px-12 py-12 flex flex-wrap justify-center gap-8" id="values">
       {values.map((value, index) => (
         <div
           key={index}
